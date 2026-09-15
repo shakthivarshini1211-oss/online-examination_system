@@ -65,3 +65,71 @@ a {
 a:hover {
     background-color: #162d66;
 }
+.form-container {
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #1f3c88;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #162d66;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container p a {
+    display: inline;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    color: #1f3c88;
+}
