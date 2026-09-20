@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = $_POST["fullname"];
     $email = $_POST["email"];
     $username = $_POST["username"];
-    $password = password_hash($_POST["password"],PASSWORD_DEFAULT);
+    $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
 
     if ($password != $confirm_password) {
@@ -17,6 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = "Passwords do not match.";
 
     } else {
+
+    $password = password_hash($password,PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO students (fullname, email, username, password)
                 VALUES ('$fullname', '$email', '$username', '$password')";
