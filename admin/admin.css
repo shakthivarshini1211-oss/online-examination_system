@@ -1,0 +1,178 @@
+/* ---------- Shared admin page styling ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: #f1f5f9;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 24px;
+    color: #14532d;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0 0 16px;
+    color: #166534;
+}
+
+p {
+    margin: 12px 0;
+    color: #475569;
+    font-size: 17px;
+}
+
+/* ---------- Dashboard links ---------- */
+/* This styles the plain links shown in your screenshot. */
+
+a {
+    display: inline-block;
+    margin: 7px;
+    padding: 13px 22px;
+    min-width: 210px;
+    border: 1px solid #15803d;
+    border-radius: 8px;
+    background: #15803d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    background: #166534;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+a:focus {
+    outline: 3px solid #86efac;
+    outline-offset: 3px;
+}
+
+/* ---------- Forms ---------- */
+
+form {
+    width: 100%;
+    max-width: 520px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.07);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    color: #334155;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #1e293b;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #15803d;
+    outline: 3px solid #dcfce7;
+}
+
+button,
+input[type="submit"] {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 7px;
+    background: #15803d;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: #166534;
+}
+
+/* ---------- Tables ---------- */
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #166534;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 14px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: 10px auto;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
