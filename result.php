@@ -48,6 +48,39 @@ for ($i = 1; $i <= $total; $i++) {
 $wrong = $answered - $score;
 $unanswered = $total - $answered;
 $percentage = ($total > 0) ? ($score / $total) * 100 : 0;
+
+require_once "db.php";
+
+$student_id = (int) $_SESSION["student_id"];
+
+$sql = "INSERT INTO results
+        (student_id, score, total_questions, answered,
+         wrong_answers, unanswered, percentage)
+        VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+$stmt = mysqli_prepare($conn, $sql);
+
+if (!$stmt) {
+    die("Could not prepare result: " . mysqli_error($conn));
+}
+
+mysqli_stmt_bind_param(
+    $stmt,
+    "iiiiiid",
+    $student_id,
+    $score,
+    $total,
+    $answered,
+    $wrong,
+    $unanswered,
+    $percentage
+);
+
+if (!mysqli_stmt_execute($stmt)) {
+    die("Could not save result: " . mysqli_stmt_error($stmt));
+}
+
+mysqli_stmt_close($stmt);
 ?>
 
 <!DOCTYPE html>
